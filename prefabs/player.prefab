@@ -1,0 +1,147 @@
+{
+  "RootObject": {
+    "__guid": "8925a1f4-918d-48af-81ff-c696617c5c6c",
+    "Name": "player",
+    "Tags": "player",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "SkinnedModelRenderer",
+        "__guid": "d51191ac-9608-4393-a0cd-08bb816a8471",
+        "BodyGroups": 341,
+        "CreateBoneObjects": false,
+        "Model": "models/citizen/citizen.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "CharacterController",
+        "__guid": "fdfcc63f-cadb-41ae-b53f-59bb3fab0341",
+        "Acceleration": 10,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "",
+        "Radius": 16,
+        "StepHeight": 18
+      },
+      {
+        "__type": "CitizenAnimationHelper",
+        "__guid": "ba0eccf8-be70-4bd2-bbab-d9f3d06f21d5",
+        "BodyWeight": 1,
+        "EyesWeight": 1,
+        "HeadWeight": 1,
+        "Height": 1,
+        "LookAtEnabled": false,
+        "Target": {
+          "_type": "component",
+          "component_id": "d51191ac-9608-4393-a0cd-08bb816a8471",
+          "go": "8925a1f4-918d-48af-81ff-c696617c5c6c",
+          "component_type": "SkinnedModelRenderer"
+        }
+      },
+      {
+        "__type": "SnotPlayer",
+        "__guid": "321e12c6-145f-49e4-9458-42318b7adb29",
+        "Animator": {
+          "_type": "component",
+          "component_id": "ba0eccf8-be70-4bd2-bbab-d9f3d06f21d5",
+          "go": "8925a1f4-918d-48af-81ff-c696617c5c6c",
+          "component_type": "CitizenAnimationHelper"
+        },
+        "Camera": {
+          "_type": "gameobject",
+          "go": "6f24c316-144d-43a9-a47a-96889af458aa"
+        },
+        "Controller": {
+          "_type": "component",
+          "component_id": "fdfcc63f-cadb-41ae-b53f-59bb3fab0341",
+          "go": "8925a1f4-918d-48af-81ff-c696617c5c6c",
+          "component_type": "CharacterController"
+        },
+        "EyePosition": "0,0,64.19988",
+        "JumpStrength": 400,
+        "RunSpeed": 250,
+        "WalkSpeed": 120
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "6f24c316-144d-43a9-a47a-96889af458aa",
+        "Name": "Camera",
+        "Position": "-183.84,-4.037704,68.6193",
+        "Rotation": "0.001642398,0.00002111564,0.01285551,0.999916",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "CameraComponent",
+            "__guid": "02ead47d-9ebb-4e4e-8d4e-b153a41bef1e",
+            "BackgroundColor": "0.33333,0.46275,0.52157,1",
+            "ClearFlags": "All",
+            "FieldOfView": 60,
+            "IsMainCamera": true,
+            "Orthographic": false,
+            "OrthographicHeight": 1204,
+            "Priority": 1,
+            "RenderExcludeTags": "",
+            "RenderTags": "",
+            "TargetEye": "None",
+            "Viewport": "0,0,1,1",
+            "ZFar": 10000,
+            "ZNear": 0.1
+          },
+          {
+            "__type": "Bloom",
+            "__guid": "77ad4ffd-ae4a-4b22-b217-73d98106d3d9",
+            "BloomColor": {
+              "color": [
+                {
+                  "c": "1,1,1,1"
+                },
+                {
+                  "t": 1,
+                  "c": "1,1,1,1"
+                }
+              ],
+              "alpha": []
+            },
+            "BloomCurve": [
+              {
+                "y": 0.5
+              },
+              {
+                "x": 1,
+                "y": 1
+              }
+            ],
+            "Mode": "Additive",
+            "Strength": 0.5,
+            "Threshold": 0.5,
+            "ThresholdWidth": 0.5
+          },
+          {
+            "__type": "Tonemapping",
+            "__guid": "59b04948-4aa5-456d-bf17-48bc3b432ce5",
+            "ExposureCompensation": 0,
+            "MaximumExposure": 2,
+            "MinimumExposure": 1,
+            "Rate": 1
+          },
+          {
+            "__type": "Sharpen",
+            "__guid": "7577d702-bcc1-43c7-af72-bca74b3289d8",
+            "Scale": 0.2
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

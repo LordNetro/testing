@@ -1,0 +1,101 @@
+{
+  "__guid": "859bad2e-c784-457f-b595-da0528c48cbe",
+  "GameObjects": [
+    {
+      "__guid": "c78a9b6f-f6bb-437e-b313-edfa4a1fab25",
+      "Name": "Map",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "__guid": "27d8fda8-4e1e-4630-98e1-de189ef1b8ca",
+          "MapName": "maps/level_1.vmap",
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "90c2910e-4ccb-46c4-bad2-2a1c4a0fb055",
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkyBox2D",
+          "__guid": "877772aa-c0ab-413d-bb9c-e532d573e431",
+          "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "EnvmapProbe",
+          "__guid": "4ce25532-8c9f-4781-ab6a-df84a018c426",
+          "Bounds": {
+            "Mins": "-512,-512,-512",
+            "Maxs": "512,512,512"
+          },
+          "Feathering": 0.02,
+          "Projection": "Sphere",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "TintColor": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "a7565dda-96e3-441e-a043-452130e9138f",
+      "Name": "Sun",
+      "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__guid": "21fce6fc-08ce-42fb-815e-591d9d8fe36f",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.94419,0.97767,1,1",
+          "Shadows": true,
+          "SkyColor": "0.2532,0.32006,0.35349,1"
+        }
+      ]
+    },
+    {
+      "__guid": "1f3bcfec-5427-4bbd-9abd-a7c310caf0c9",
+      "Name": "Player",
+      "Position": "114.0862,-195.2396,63.99994",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "prefabs/player.prefab"
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "level_1",
+  "Description": "",
+  "LastSaved": "2024-03-16T13:09:54.2926653\u002B01:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
